@@ -4,7 +4,7 @@
 (require 'request)
 (require 'org)
 
-(defvar raindrop-api-token "3e246817-b3be-4fe0-a536-630c914f6362"
+(defvar raindrop-api-token ""
   "API token for authenticating with Raindrop.io.")
 
 (defvar raindrop-org-file "~/raindrop-bookmarks.org"
@@ -74,4 +74,4 @@
   (message "New bookmarks saved to %s and deleted from Raindrop.io"
            raindrop-org-file))
 
-(raindrop-save-to-org)
+;;(raindrop-save-to-org)
