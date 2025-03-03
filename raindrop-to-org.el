@@ -4,10 +4,10 @@
 (require 'request)
 (require 'org)
 
-(defvar raindrop-api-token ""
+(defvar raindrop-api-token (getenv "RAINDROP_API_KEY")
   "API token for authenticating with Raindrop.io.")
 
-(defvar raindrop-org-file "~/raindrop-bookmarks.org"
+(defvar raindrop-org-file "~/org/raindrop-bookmarks.org"
   "Path to the Org-mode file where bookmarks will be stored.")
 
 (defun raindrop-fetch-bookmarks ()
@@ -74,4 +74,5 @@
   (message "New bookmarks saved to %s and deleted from Raindrop.io"
            raindrop-org-file))
 
+;;(raindrop-fetch-bookmarks)
 ;;(raindrop-save-to-org)
